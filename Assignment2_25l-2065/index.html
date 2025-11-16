@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoCharge - Sustainable solar-powered charging solutions for a greener future">
+    <title>EcoCharge - Sustainable Energy for Everyone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="site-container">
+        <!-- HEADER SECTION -->
+        <header>
+            <nav role="navigation" aria-label="Main navigation">
+                <div class="logo">
+                    <!-- Custom SVG Logo -->
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="20" cy="20" r="18" fill="#2ecc71"/>
+                        <path d="M20 8 L28 20 L20 32 L12 20 Z" fill="#f39c12"/>
+                        <circle cx="20" cy="20" r="6" fill="#1a1a2e"/>
+                    </svg>
+                    EcoCharge
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#join">Join Us</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="hero" role="banner">
+            <div class="hero-content">
+                <h1>Power Your Future Sustainably</h1>
+                <p>Revolutionary solar technology that charges your devices faster while reducing your carbon footprint by 80%</p>
+                <a href="#join" class="cta-button">Get Early Access</a>
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- FEATURES SECTION -->
+            <section class="features" id="features">
+                <h2>Why Choose EcoCharge?</h2>
+                <div class="feature-grid">
+                    <!-- Feature Card 1 -->
+                    <article class="feature-card" tabindex="0" aria-label="Feature: Solar Powered">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-icon" aria-hidden="true">☀️</div>
+                                <h3>100% Solar Powered</h3>
+                                <p>Harness the sun's energy</p>
+                            </div>
+                            <div class="card-back">
+                                <p>Our advanced photovoltaic cells capture 40% more sunlight than traditional panels, ensuring your devices stay charged even on cloudy days.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Feature Card 2 -->
+                    <article class="feature-card" tabindex="0" aria-label="Feature: Fast Charging">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-icon" aria-hidden="true">⚡</div>
+                                <h3>Ultra Fast Charging</h3>
+                                <p>3x faster than standard</p>
+                            </div>
+                            <div class="card-back">
+                                <p>Proprietary QuickCharge technology delivers power at unprecedented speeds. Full charge in just 30 minutes for most devices.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Feature Card 3 -->
+                    <article class="feature-card" tabindex="0" aria-label="Feature: Eco Friendly">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-icon" aria-hidden="true">🌱</div>
+                                <h3>Eco Friendly</h3>
+                                <p>Zero emissions guaranteed</p>
+                            </div>
+                            <div class="card-back">
+                                <p>Made from 95% recycled materials. Every EcoCharge unit plants 5 trees and removes 100kg of CO₂ annually from the atmosphere.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- FORM SECTION -->
+            <section class="form-section" id="join">
+                <div class="form-container">
+                    <h2>Join the Green Revolution</h2>
+                    <form action="#" method="post" aria-label="Early access signup form">
+                        
+                        <!-- Text Input: Full Name -->
+                        <div class="form-group">
+                            <label for="full-name">ALI RAFEEQ *</label>
+                            <input 
+                                type="text" 
+                                id="full-name" 
+                                name="full-name" 
+                                required 
+                                aria-required="true" 
+                                placeholder="John Doe"
+                                minlength="2">
+                        </div>
+
+                        <!-- Text Input: Email -->
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                aria-required="true" 
+                                placeholder="l252065@lhr.nu.edu.pk">
+                        </div>
+
+                        <!-- Checkbox Group (3+ checkboxes) -->
+                        <fieldset class="form-group">
+                            <legend>What interests you most? (Select all that apply)</legend>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="portable-chargers" id="interest-portable">
+                                    <span class="checkmark"></span>
+                                    Portable Chargers
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="home-panels" id="interest-home">
+                                    <span class="checkmark"></span>
+                                    Home Solar Panels
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="vehicle-charging" id="interest-vehicle">
+                                    <span class="checkmark"></span>
+                                    Vehicle Charging
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="commercial" id="interest-commercial">
+                                    <span class="checkmark"></span>
+                                    Commercial Solutions
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <!-- Radio Button Group (2+ radio buttons) -->
+                        <fieldset class="form-group">
+                            <legend>Choose your plan *</legend>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="plan" value="starter" id="plan-starter" required aria-required="true">
+                                    <span class="radiomark"></span>
+                                    Starter ($99)
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="plan" value="pro" id="plan-pro" required aria-required="true">
+                                    <span class="radiomark"></span>
+                                    Pro ($199)
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="plan" value="enterprise" id="plan-enterprise" required aria-required="true">
+                                    <span class="radiomark"></span>
+                                    Enterprise ($499)
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <!-- Select Dropdown -->
+                        <div class="form-group">
+                            <label for="hear-about">How did you hear about us?</label>
+                            <select id="hear-about" name="hear-about">
+                                <option value="">-- Please select --</option>
+                                <option value="social-media">Social Media</option>
+                                <option value="search-engine">Search Engine</option>
+                                <option value="friend">Friend or Colleague</option>
+                                <option value="advertisement">Advertisement</option>
+                                <option value="news">News Article</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label for="message">Additional Comments</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="5"
+                                placeholder="Tell us about your energy needs..."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn">Reserve Your Spot</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER SECTION -->
+        <footer id="about">
+            <div class="footer-content">
+                <p>&copy; 2024 EcoCharge. Powering a sustainable future.</p>
+                <ul class="social-links">
+                    <li><a href="#" aria-label="Visit our Facebook page">📘</a></li>
+                    <li><a href="#" aria-label="Follow us on Twitter">🐦</a></li>
+                    <li><a href="#" aria-label="Follow us on Instagram">📷</a></li>
+                    <li><a href="#" aria-label="Connect on LinkedIn">💼</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
