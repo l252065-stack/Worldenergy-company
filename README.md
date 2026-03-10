@@ -4,6 +4,23 @@
 
 ---
 
+## 📊 Market Research Report
+
+A companion **market research report** has been added to this repository, identifying the highest-demand countries, cities, and business niches for digital services (website development, online booking, automation, and AI tools).
+
+**File:** [`market-research.html`](market-research.html) &nbsp;|&nbsp; **Styles:** [`market-research.css`](market-research.css)
+
+### Highlights
+| Output | Details |
+|--------|---------|
+| 🌍 **Top 5 Countries** | USA, UK, UAE, Australia, Canada |
+| 🏙️ **Top 10 Cities** | NYC, Dubai, London, LA, Sydney, Toronto, Chicago, Manchester, Melbourne, Houston |
+| 💼 **Best Niches** | Barber Shops, Dental Clinics, Beauty Salons, Restaurants, Retail, Gyms |
+| 📈 **Opportunity Levels** | High / Medium scored per region-niche pair |
+| 🔬 **Methodology** | Google Maps audits, social media analysis, 200K+ customer reviews, market trend data |
+
+---
+
 ## 🌱 Project Overview
 
 **EcoCharge** is a fictional sustainable energy company offering revolutionary solar-powered charging solutions. This project demonstrates modern web development techniques using only HTML5 and CSS3, with no JavaScript or frameworks.
