@@ -1,0 +1,543 @@
+/* ============================================================
+   Market Research Report - Digital Services Demand Analysis
+   Styles for market-research.html
+   ============================================================ */
+
+/* --- CSS Variables --- */
+:root {
+    --primary:       #2563eb;
+    --primary-dark:  #1d4ed8;
+    --accent:        #f59e0b;
+    --accent-dark:   #d97706;
+    --success:       #10b981;
+    --warning:       #f59e0b;
+    --danger:        #ef4444;
+    --dark:          #0f172a;
+    --dark-secondary:#1e293b;
+    --mid:           #334155;
+    --muted:         #64748b;
+    --light:         #f1f5f9;
+    --white:         #ffffff;
+    --card-shadow:   0 4px 24px rgba(0,0,0,0.10);
+    --radius:        12px;
+    --radius-sm:     8px;
+    --transition:    0.3s ease;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    line-height: 1.7;
+}
+
+/* --- Utility --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.badge-high    { background: var(--success); color: var(--white); }
+.badge-medium  { background: var(--warning); color: var(--dark);  }
+.badge-low     { background: var(--muted);   color: var(--white); }
+
+/* --- Header / Hero --- */
+.report-header {
+    background: linear-gradient(135deg, var(--dark-secondary) 0%, var(--primary-dark) 100%);
+    padding: 4rem 0 3rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.report-header .meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: #93c5fd;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.report-header h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.report-header h1 span { color: var(--accent); }
+
+.report-header .subtitle {
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+    color: #cbd5e1;
+}
+
+.header-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+
+.stat-pill {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 999px;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* --- Section Generic --- */
+.section { padding: 4rem 0; }
+
+.section-title {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.section-title span { color: var(--accent); }
+
+.section-subtitle {
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+.section-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin: 0;
+}
+
+/* --- Executive Summary --- */
+.summary-section { background: var(--dark-secondary); }
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    background: var(--dark);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow);
+}
+
+.summary-card .icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
+.summary-card h3 { font-size: 2rem; font-weight: 800; color: var(--accent); }
+.summary-card p { font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem; }
+
+.summary-insight {
+    background: rgba(37,99,235,0.12);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem 1.5rem;
+    color: #bfdbfe;
+    font-size: 0.95rem;
+}
+
+/* --- Methodology --- */
+.methodology-section { background: var(--dark); }
+
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.25rem;
+}
+
+.method-card {
+    background: var(--dark-secondary);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: border-color var(--transition);
+}
+
+.method-card:hover { border-color: var(--primary); }
+.method-card .m-icon { font-size: 1.75rem; margin-bottom: 0.5rem; }
+.method-card h4 { font-size: 0.9rem; margin-bottom: 0.25rem; }
+.method-card p { font-size: 0.8rem; color: var(--muted); }
+
+/* --- Top 5 Countries --- */
+.countries-section { background: var(--dark-secondary); }
+
+.country-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.country-card {
+    background: var(--dark);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1.25rem;
+    align-items: start;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.country-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px var(--primary);
+}
+
+.country-rank {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.country-info h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.country-info .why { font-size: 0.88rem; color: #94a3b8; margin-bottom: 0.75rem; }
+
+.niches-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.niche-tag {
+    background: rgba(37,99,235,0.15);
+    border: 1px solid rgba(37,99,235,0.3);
+    color: #93c5fd;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.country-meta {
+    text-align: right;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.country-meta .est-revenue {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+/* --- Top 10 Cities --- */
+.cities-section { background: var(--dark); }
+
+.cities-table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.07);
+}
+
+.cities-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.cities-table thead {
+    background: var(--mid);
+}
+
+.cities-table th {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+.cities-table td {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    vertical-align: middle;
+}
+
+.cities-table tbody tr { transition: background var(--transition); }
+.cities-table tbody tr:hover { background: rgba(255,255,255,0.03); }
+
+.city-rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--dark-secondary);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+.city-name { font-weight: 700; }
+.city-country { font-size: 0.8rem; color: var(--muted); }
+
+.score-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.score-track {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 999px;
+    overflow: hidden;
+    min-width: 80px;
+}
+
+.score-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.score-value { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+
+/* --- Niche Analysis --- */
+.niches-section { background: var(--dark-secondary); }
+
+.niche-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.niche-card {
+    background: var(--dark);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.niche-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow);
+}
+
+.niche-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--dark-secondary);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.niche-icon { font-size: 1.75rem; }
+
+.niche-header h3 { font-size: 1rem; font-weight: 700; flex: 1; }
+
+.niche-body { padding: 1.25rem 1.5rem; }
+
+.niche-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.85rem;
+}
+
+.niche-stat:last-child { border-bottom: none; }
+.niche-stat .label { color: var(--muted); }
+.niche-stat .value { font-weight: 600; }
+
+.gap-list { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.07); }
+.gap-list h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.5rem; }
+.gap-list ul { list-style: none; }
+.gap-list li { font-size: 0.82rem; color: #cbd5e1; padding: 0.2rem 0; display: flex; gap: 0.5rem; }
+.gap-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+/* --- Digital Gaps --- */
+.gaps-section { background: var(--dark); }
+
+.gap-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.gap-card {
+    background: var(--dark-secondary);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.gap-card .g-icon { font-size: 2rem; }
+.gap-card h4 { font-size: 1rem; font-weight: 700; }
+.gap-card p { font-size: 0.85rem; color: #94a3b8; }
+
+.gap-stat {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.gap-stat span { font-size: 0.85rem; font-weight: 400; color: var(--muted); }
+
+/* --- Opportunity Table --- */
+.opportunities-section { background: var(--dark-secondary); }
+
+.opp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+}
+
+.opp-card {
+    background: var(--dark);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+}
+
+.opp-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.opp-card h3 { font-size: 0.95rem; font-weight: 700; }
+.opp-card .region { font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+
+.opp-details { font-size: 0.85rem; color: #94a3b8; }
+
+.opp-details li {
+    padding: 0.3rem 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.opp-details li::before { content: "✓"; color: var(--success); flex-shrink: 0; font-size: 0.75rem; }
+
+/* --- Recommendations --- */
+.recommendations-section { background: var(--dark); }
+
+.rec-list { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.rec-item {
+    background: var(--dark-secondary);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.rec-number {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: var(--dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.rec-content h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+.rec-content p { font-size: 0.88rem; color: #94a3b8; }
+
+/* --- Footer --- */
+.report-footer {
+    background: var(--dark-secondary);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.report-footer p { font-size: 0.85rem; color: var(--muted); }
+.report-footer a { color: var(--primary); text-decoration: none; }
+.report-footer a:hover { text-decoration: underline; }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .report-header { padding: 2.5rem 0 2rem; }
+    .header-stats { gap: 0.75rem; }
+
+    .country-card {
+        grid-template-columns: auto 1fr;
+    }
+
+    .country-meta {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .cities-table th:nth-child(4),
+    .cities-table td:nth-child(4) { display: none; }
+}
+
+@media (max-width: 480px) {
+    .summary-grid { grid-template-columns: 1fr 1fr; }
+    .cities-table th:nth-child(5),
+    .cities-table td:nth-child(5) { display: none; }
+}
